@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+aside {
+    width: 150px;
+}
+
+main {
+    margin-left: 180px;
+    margin-right: 50px;
+}
+
+h2:hover {
+    color: #898989;
+}
+
+span {
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.stratagem {
+    background-color: blue;
+}
+
+.unit-model {
+    background-color: green;
+}
+
+.ability {
+    background-color: #ff5673;
+}
+.detachment {
+    background-color: red;
+}
+.enhancement {
+    background-color: orange;
+}
+
+
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid > div {
+    border: 1px solid;
+    padding: 8px;
+  }
+
+  .grid > div:nth-child(1), .grid > div:nth-child(2) {
+    background-color: rgb(64, 64, 64)
+  }
+
+  section:nth-child(even) {
+    background-color: rgb(35, 35, 35)
+  }
+
+
+@media (max-width: 425px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* Stack items in a single column */
+    }
+
+    .grid > div:nth-child(odd) {
+        order: 1;
+        /* Odd items appear first */
+    }
+
+    .grid > div:nth-child(even) {
+        order: 2;
+        /* Even items appear second */
+    }
+
+}
+
+
+@media (max-width: 958px) {
+    aside {
+        display: none
+    }
+
+    main {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}

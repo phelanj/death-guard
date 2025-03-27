@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plague Company</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="sans-serif bg-dark-gray near-white">
+    <nav class="bg-near-black fixed top-0 left-0 db dn-l w-100 pa2">
+        <a>☰</a>
+    </nav>
+    <aside class="fixed vh-100 pl3 pr4 bg-near-black dn db-l">
+        <a>
+            <p class="f3">✖</p>
+        </a>
+        <h3 class="white mb1">Sections</h3>
+        <ul id="sidebar-links" class="list mt0 pa0 white"></ul>
+    </aside>
+    <main class="w-100 mt4">
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> Command Phase
+            </h2>
+            <div class="section-content">
+                <h3>Rules Step</h3>
+                <ul>
+                    <li>
+                        (1CP) <span class="stratagem">Gifts of Decay</span> - Your model regains up to D3 lost wounds.
+                        If your model’s unit is within Contagion Range of an Infected objective marker you control, your
+                        model regains up to 3 lost wounds instead.
+                    </li>
+                    <li>
+                        <span class="unit-model">Rhino</span> - <span class="ability">Self Repair</span> - At the start
+                        of your Command phase, this model regains 1 lost wound.
+                    </li>
+                </ul>
+                <h3>Battleshock</h3>
+                <ul>
+                    <li>(1CP) <span class="stratagem">Insane Bravery</span> - Pass battle shock (Can only use once per
+                        battle)</li>
+                    <li><span class="unit-model">Plague Marines</span> - <span class="ability">Insane Bravery</span> -
+                        While this unit is within range of an objective marker you control, each time you take a
+                        Battle-shock test for this unit, add 1 to that test. </li>
+                </ul>
+                <hr>
+            </div>
+        </section>
+        <!-- MOVEMENT -->
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div>▶️ Movement Phase
+            </h2>
+            <div class="section-content">
+                <div class="grid">
+                    <div>
+                        <h3>When I'm Moving</h3>
+                    </div>
+                    <div>
+                        <h3>When Opponent's Moving</h3>
+                    </div>
+                    <div></div>
+
+                    <div>
+                        <ul>
+                            <li>(1CP) <span class="stratagem">Fire Overwatch</span></li>
+                            <li>(1CP) <span class="stratagem">Rapid Ingress</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SHOOTING -->
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> 🔫 Shooting Phase
+            </h2>
+            <div class="section-content">
+                <h3>Character Abilites</h3>
+                <ul>
+                    <li>
+                        <p><span class="unit-model">Typhus</span> - <span class="ability">The Eater Plague</span></p>
+                        <p>In your
+                            Shooting phase, you can select one enemy unit within 18" of and visible to this PSYKER
+                            (excluding units with the Lone Operative ability that are not part of an Attached unit and
+                            are
+                            not within 12" of this PSYKER) and roll one D6:</p>
+                        <ul>
+                            <li>on a 1, this PSYKER's unit suffers D3 mortal wounds;</li>
+                            <li>on a 2-5, that enemy unit suffers D6 mortal wounds;</li>
+                            <li>on a 6, that enemy unit suffers D3+3 mortal wounds.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><span class="unit-model">Biologus Putrifier</span> - <span class="ability">Explosive
+                                Maladies</span></p>
+                        <p>Once per battle round, you can target one unit from your army with this ability with the
+                            Grenade Stratagem for 0CP.</p>
+                    </li>
+                </ul>
+                <div class="grid">
+                    <div>
+                        <h3>When I'm Shooting</h3>
+                    </div>
+                    <div>
+                        <h3>When Opponent's Shooting</h3>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>(1CP) <span class="stratagem">Grenade</span></li>
+                            <li>(1CP) <span class="stratagem">Ferric Blight</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>(1CP) <span class="stratagem">Go to Ground</span></li>
+                            <li>(1CP) <span class="stratagem">Cloud of Flies</span></li>
+                        </ul>
+                    </div>
+                    <div class="mb0-ns mb4">
+                        <h3>Hit Roll</h3>
+                        <ul>
+                            <li><span class="unit-model">Biologus Putrifier</span> - <span class="ability">Foul
+                                    Infusion</span></li>
+                        </ul>
+                        <h3>Wound Roll</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2 pa0">Nurgle's Gift (Aura):</p>
+                                <p class="ma0 pa0">While an enemy unit is within Contagion Range of this unit, subtract
+                                    1 from the
+                                    Toughness characteristic of models in that enemy</p>
+                            </li>
+                        </ul>
+                        <h3>Opponent's Saving Throw</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="detachment">Rattlejoint Ague</span> (Aura)</p>
+                                <p class="ma0">While an enemy unit is within Contagion Range of this unit, worsen the
+                                    Save
+                                    characteristic of models in that enemy unit by 1.</p>
+                            </li>
+                        </ul>
+                        <h3>Mortal Wounds Roll</h3>
+                        <ul>
+                            <li><span class="ability">The Eater Plague</span> triggers <span class="ability">Curse of
+                                    the Walking Pox</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Hit Roll</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="detachment">Skullsquirm Blight</span> (Aura)</p>
+                                <p class="ma0">While an enemy unit is within Contagion Range of this unit, worsen the
+                                    Ballistic Skill characteristics of weapons equipped by models in that enemy unit by
+                                    1.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb2"><span class="ability">Stealth</span></p>
+                                <p class="ma0">Each time a ranged attack is made against the unit, subtract 1 from that
+                                    attack’s Hit
+                                    roll.</p>
+                            </li>
+                        </ul>
+                        <h3>Wound Roll</h3>
+                        <h3>My Saving Throw</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="unit-model">Biologus Putrifier</span> <span
+                                        class="unit-model">Rhino</span>:</p>
+                                <p class="ma0"><span class="ability">Deadly Demise</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CHARGE -->
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> ⏩ Charge Phase
+            </h2>
+            <div class="section-content">
+                <div class="grid">
+                    <div>
+                        <h3>When I'm Charging</h3>
+                    </div>
+                    <div>
+                        <h3>When Opponent's Charging</h3>
+                    </div>
+                    <div>
+                        <li>
+                            (1CP) <span class="stratagem">Tank Shock</span>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            (1CP) <span class="stratagem">Heroic Intervention</span>
+                        </li>
+                        <li>
+                            (1CP) <span class="stratagem">Fire Overwatch</span>
+                        </li>
+                        <li>
+                            <p class="mb2"><span class="enhancement">Shamblerot</span></p>
+                            <p class="ma0">Each time the bearer’s unit is selected as a target of an enemy unit’s
+                                charge, until the end of the phase, subtract 2 from Charge rolls made for that enemy
+                                unit.</p>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> Section 2
+            </h2>
+            <div class="section-content">
+                <p>Some content in section 2.</p>
+                <table class="table-2col">
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>More Data</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> Section 2
+            </h2>
+            <div class="section-content">
+                <p>Some content in section 2.</p>
+                <table class="table-2col">
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>More Data</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> Section 2
+            </h2>
+            <div class="section-content">
+                <p>Some content in section 2.</p>
+                <table class="table-2col">
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>More Data</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2 class="pointer" onclick="toggleSection(this)">
+                <div class="dib toggle-icon">▼</div> Section 2
+            </h2>
+            <div class="section-content">
+                <p>Some content in section 2.</p>
+                <table class="table-2col">
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>More Data</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Populate sidebar dynamically
+        document.addEventListener('DOMContentLoaded', function () {
+            let sidebarLinks = document.getElementById('sidebar-links');
+            document.querySelectorAll('h2').forEach((h2, index) => {
+                let id = `section-${index}`;
+                h2.id = id;
+                let li = document.createElement('li');
+                li.innerHTML = `<a href="#${id}" class="db white pv2">${h2.textContent}</a>`;
+                sidebarLinks.appendChild(li);
+            });
+        });
+
+        // Toggle section content
+        function toggleSection(header) {
+            let content = header.nextElementSibling;
+            let icon = header.querySelector('.toggle-icon');
+            icon.classList.toggle('rotate-270');
+            content.classList.toggle('dn'); // Toggle the closed class for smooth transition
+            // icon.classList.toggle('rotate-90');
+        }
+    </script>
+</body>
+
+</html>
