@@ -7,53 +7,75 @@
     <title>Plague Company</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap" rel="stylesheet">
 </head>
 
 <body class="sans-serif bg-dark-gray near-white">
     <nav class="bg-near-black fixed top-0 left-0 db dn-l w-100 pa2">
         <a>☰</a>
     </nav>
-    <aside class="fixed vh-100 pl3 pr4 bg-near-black dn db-l">
-        <a>
-            <p class="f3">✖</p>
-        </a>
-        <h3 class="white mb1">Sections</h3>
-        <ul id="sidebar-links" class="list mt0 pa0 white"></ul>
+    <aside class="fixed vh-100 pa3 bg-near-black dn db-l">
+        <ul id="sidebar-links" class="list mt0 pa0 white">
+            <li><a class="dim" href="#command-phase"><img src="img/stratCommand.png" alt=""></a></li>
+            <li><a class="dim" href="#movement-phase"><img src="img/stratMovement.png" alt=""></a></li>
+            <li><a class="dim" href="#shooting-phase"><img src="img/stratShooting.png" alt=""></a></li>
+            <li><a class="dim" href="#charge-phase"><img src="img/stratCharge.png" alt=""></a></li>
+            <li><a class="dim" href="#fight-phase"><img src="img/stratFight.png" alt=""></a></li>
+        </ul>
     </aside>
-    <main class="w-100 mt4">
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> Command Phase
-            </h2>
+    <main class="w-100 mt4 f5 f4-ns">
+        <!-- COMMAND PHASE -->
+        <section id="command-phase">
+            <header class="pointer dim" onclick="toggleSection(this)">
+                <h2>
+                    <div class="dib toggle-icon">▼</div>
+                    <img src="img/stratCommand.png" alt="Icon" class="header-icon">
+                    Command Phase
+                </h2>
+            </header>
             <div class="section-content">
                 <h3>Rules Step</h3>
                 <ul>
                     <li>
-                        (1CP) <span class="stratagem">Gifts of Decay</span> - Your model regains up to D3 lost wounds.
-                        If your model’s unit is within Contagion Range of an Infected objective marker you control, your
-                        model regains up to 3 lost wounds instead.
+                        (1CP) <span class="stratagem">Gifts of Decay</span>
+                        <p class=" mt2 waha-copy lh-copy">Your model regains
+                            up to D3 lost wounds.
+                            If your model’s unit is within Contagion Range of an Infected objective marker you control,
+                            your
+                            model regains up to 3 lost wounds instead.</p>
                     </li>
                     <li>
-                        <span class="unit-model">Rhino</span> - <span class="ability">Self Repair</span> - At the start
-                        of your Command phase, this model regains 1 lost wound.
+                        <span class="unit-model">Rhino</span> - <span class="ability">Self Repair</span>
+                        <p class="mt2 waha-copy lh-copy">
+                            At the start
+                            of your Command phase, this model regains 1 lost wound.
+                        </p>
                     </li>
                 </ul>
                 <h3>Battleshock</h3>
                 <ul>
-                    <li>(1CP) <span class="stratagem">Insane Bravery</span> - Pass battle shock (Can only use once per
-                        battle)</li>
-                    <li><span class="unit-model">Plague Marines</span> - <span class="ability">Insane Bravery</span> -
-                        While this unit is within range of an objective marker you control, each time you take a
-                        Battle-shock test for this unit, add 1 to that test. </li>
+                    <li>(1CP) <span class="stratagem">Insane Bravery</span> - <span class="waha-copy lh-copy">Pass
+                            battle shock (Can only use once per
+                            battle)</span></li>
+                    <li><span class="unit-model">Plague Marines</span> - <span class="ability">Remorseless</span>
+                        <p class="mt2 waha-copy lh-copy">While this unit is within range of an objective marker you
+                            control, each time you take a
+                            Battle-shock test for this unit, add 1 to that test.</p>
+                    </li>
                 </ul>
-                <hr>
             </div>
         </section>
         <!-- MOVEMENT -->
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div>▶️ Movement Phase
-            </h2>
+        <section id="movement-phase">
+            <header class="pointer dim" onclick="toggleSection(this)">
+                <h2>
+                    <div class="dib toggle-icon">▼</div>
+                    <img src="img/stratMovement.png" alt="Icon" class="header-icon">
+                    Movement Phase
+                </h2>
+            </header>
             <div class="section-content">
                 <div class="grid">
                     <div>
@@ -74,21 +96,25 @@
             </div>
         </section>
         <!-- SHOOTING -->
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> 🔫 Shooting Phase
-            </h2>
+        <section id="shooting-phase">
+            <header class="pointer dim" onclick="toggleSection(this)">
+                <h2>
+                    <div class="dib toggle-icon">▼</div>
+                    <img src="img/stratShooting.png" alt="Icon" class="header-icon">
+                    Shooting Phase
+                </h2>
+            </header>
             <div class="section-content">
                 <h3>Character Abilites</h3>
                 <ul>
                     <li>
                         <p><span class="unit-model">Typhus</span> - <span class="ability">The Eater Plague</span></p>
-                        <p>In your
+                        <p class="waha-copy lh-copy">In your
                             Shooting phase, you can select one enemy unit within 18" of and visible to this PSYKER
                             (excluding units with the Lone Operative ability that are not part of an Attached unit and
                             are
                             not within 12" of this PSYKER) and roll one D6:</p>
-                        <ul>
+                        <ul class="waha-copy lh-copy">
                             <li>on a 1, this PSYKER's unit suffers D3 mortal wounds;</li>
                             <li>on a 2-5, that enemy unit suffers D6 mortal wounds;</li>
                             <li>on a 6, that enemy unit suffers D3+3 mortal wounds.</li>
@@ -97,7 +123,8 @@
                     <li>
                         <p><span class="unit-model">Biologus Putrifier</span> - <span class="ability">Explosive
                                 Maladies</span></p>
-                        <p>Once per battle round, you can target one unit from your army with this ability with the
+                        <p class="waha-copy lh-copy">Once per battle round, you can target one unit from your army with
+                            this ability with the
                             Grenade Stratagem for 0CP.</p>
                     </li>
                 </ul>
@@ -113,6 +140,11 @@
                         <ul>
                             <li>(1CP) <span class="stratagem">Grenade</span></li>
                             <li>(1CP) <span class="stratagem">Ferric Blight</span></li>
+                            <li>(1CP) <span class="stratagem">Boilblight</span>
+                                <p class="waha-copy lh-copy">Until the end of the phase, each time a weapon equipped by
+                                    a DEATH GUARD model from your army targets that enemy unit, that weapon has the
+                                    [HEAVY] and [IGNORES COVER] abilities.</p>
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -131,7 +163,8 @@
                         <ul>
                             <li>
                                 <p class="mb2 pa0">Nurgle's Gift (Aura):</p>
-                                <p class="ma0 pa0">While an enemy unit is within Contagion Range of this unit, subtract
+                                <p class="ma0 pa0 waha-copy lh-copy">While an enemy unit is within Contagion Range of
+                                    this unit, subtract
                                     1 from the
                                     Toughness characteristic of models in that enemy</p>
                             </li>
@@ -140,7 +173,8 @@
                         <ul>
                             <li>
                                 <p class="mb2"><span class="detachment">Rattlejoint Ague</span> (Aura)</p>
-                                <p class="ma0">While an enemy unit is within Contagion Range of this unit, worsen the
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                    unit, worsen the
                                     Save
                                     characteristic of models in that enemy unit by 1.</p>
                             </li>
@@ -156,14 +190,195 @@
                         <ul>
                             <li>
                                 <p class="mb2"><span class="detachment">Skullsquirm Blight</span> (Aura)</p>
-                                <p class="ma0">While an enemy unit is within Contagion Range of this unit, worsen the
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                    unit, worsen the
                                     Ballistic Skill characteristics of weapons equipped by models in that enemy unit by
                                     1.
                                 </p>
                             </li>
                             <li>
                                 <p class="mb2"><span class="ability">Stealth</span></p>
-                                <p class="ma0">Each time a ranged attack is made against the unit, subtract 1 from that
+                                <p class="ma0 waha-copy lh-copy">Each time a ranged attack is made against the unit,
+                                    subtract 1 from that
+                                    attack’s Hit
+                                    roll.</p>
+                            </li>
+                        </ul>
+                        <h3>Wound Roll</h3>
+                        <h3>My Saving Throw</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="unit-model">Biologus Putrifier</span> <span
+                                        class="unit-model">Rhino</span>: <span class="ability">Deadly Demise</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CHARGE -->
+        <section  id="charge-phase">
+            <header class="pointer dim" onclick="toggleSection(this)">
+                <h2>
+                    <div class="dib toggle-icon">▼</div>
+                    <img src="img/stratCharge.png" alt="Icon" class="header-icon">
+                    Charge Phase
+                </h2>
+            </header>
+            <div class="section-content">
+                <div class="grid">
+                    <div>
+                        <h3>When I'm Charging</h3>
+                    </div>
+                    <div>
+                        <h3>When Opponent's Charging</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                (1CP) <span class="stratagem">Tank Shock</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                (2CP) <span class="stratagem">Heroic Intervention</span>
+                            </li>
+                            <li>
+                                (1CP) <span class="stratagem">Fire Overwatch</span>
+                            </li>
+                            <li>
+                                <p class="mb2"><span class="enhancement">Shamblerot</span></p>
+                                <p class="ma0 waha-copy lh-copy">Each time the bearer’s unit is selected as a target of
+                                    an enemy unit’s
+                                    charge, until the end of the phase, subtract 2 from Charge rolls made for that enemy
+                                    unit.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fight Phase -->
+        <section id="fight-phase">
+            <header class="pointer dim" onclick="toggleSection(this)">
+                <h2>
+                    <div class="dib toggle-icon">▼</div>
+                    <img src="img/stratFight.png" alt="Icon" class="header-icon">
+                    Fight Phase
+                </h2>
+            </header>
+            <div class="section-content">
+                <div class="mb3">
+                    <div class="ba pa2">
+                        <h3>Either Player's Turn</h3>
+                    </div>
+                    <div class="ba pa2">
+                        <ul>
+                            <li>
+                                <p class="mb2">(1CP) <span class="stratagem">Counter-Offensive</span> - <span
+                                        class="waha-copy lh-copy">Your unit fights
+                                        next.</span></p>
+                            </li>
+                            <li>
+                                <p class="mb2">(1CP) <span class="stratagem">Epic Challenge</span> - <span
+                                        class="waha-copy lh-copy">Until the end of the phase, all melee attacks made by
+                                        that model have the [PRECISION] ability.</span></p>
+                            </li>
+                            <li>
+                                <p class="mb2">(1CP) <span class="stratagem">Ferric Blight</span></p>
+                                <p class="ma0 waha-copy lh-copy">Until the end of the phase, each time a model in your
+                                    unit makes an
+                                    attack, improve the Armour Penetration characteristic of that attack by 1. If the
+                                    target of that attack is within Contagion Range of an Infected objective marker you
+                                    control and a Critical Wound is scored for that attack, improve the Armour
+                                    Penetration characteristic of that attack by 2 instead.</p>
+                            </li>
+                            <li>
+                                <p class="mb2">(1CP) <span class="stratagem">Sanguous Flux</span></p>
+                                <p class="ma0 waha-copy lh-copy">Until the end of the phase, weapons equipped by models
+                                    in your unit have
+                                    the [SUSTAINED HITS 1] ability. While your unit is within range of an Infected
+                                    objective marker you control, those weapons have the [SUSTAINED HITS 2] ability
+                                    instead.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div>
+                        <h3>When I'm Fighting</h3>
+                    </div>
+                    <div>
+                        <h3>When Opponent's Fighting</h3>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>(1CP) <span class="stratagem">G</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>(1CP) <span class="stratagem">Go </span></li>
+                            <li>(1CP) <span class="stratagem"></span></li>
+                        </ul>
+                    </div>
+                    <div class="mb0-ns mb4">
+                        <h3>Hit Roll</h3>
+                        <ul>
+                            <li><span class="unit-model">Biologus Putrifier</span> - <span class="ability">Foul
+                                    Infusion</span></li>
+                            <li>
+                                <p><span class="enhancement">Deadly Pathogen</span> - Attack + 1</p>
+                            </li>
+
+                            </li>
+                        </ul>
+                        <h3>Wound Roll</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2 pa0">Nurgle's Gift (Aura):</p>
+                            </li>
+                            <li><span class="enhancement">Deadly Pathogen</span> - Strength +1</li>
+                        </ul>
+                        <h3>Opponent's Saving Throw</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="ability">Curse of the Walking Pox</span></p>
+                                <p class="ma0 waha-copy lh-copy">Each time a model in this unit makes an attack that
+                                    destroys an enemy
+                                    model (excluding MONSTER and VEHICLE models), you can return one destroyed Poxwalker
+                                    model to this unit. While TYPHUS is leading this unit, enemy models destroyed as a
+                                    result of TYPHUS’ The Eater Plague ability count as enemy models destroyed by an
+                                    attack made by a model in this unit for the purposes of this ability.</p>
+                            </li>
+                            <li>
+                                <p class="mb2"><span class="detachment">Rattlejoint Ague</span> (Aura)</p>
+                            </li>
+                        </ul>
+                        <h3>Mortal Wounds Roll</h3>
+                        <ul>
+                            <li><span class="ability">The Eater Plague</span> triggers <span class="ability">Curse of
+                                    the Walking Pox</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Hit Roll</h3>
+                        <ul>
+                            <li>
+                                <p class="mb2"><span class="detachment">Skullsquirm Blight</span> (Aura)</p>
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                    unit, worsen the
+                                    Ballistic Skill characteristics of weapons equipped by models in that enemy unit by
+                                    1.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb2"><span class="ability">Stealth</span></p>
+                                <p class="ma0 waha-copy lh-copy">Each time a ranged attack is made against the unit,
+                                    subtract 1 from that
                                     attack’s Hit
                                     roll.</p>
                             </li>
@@ -181,127 +396,11 @@
                 </div>
             </div>
         </section>
-        <!-- CHARGE -->
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> ⏩ Charge Phase
-            </h2>
-            <div class="section-content">
-                <div class="grid">
-                    <div>
-                        <h3>When I'm Charging</h3>
-                    </div>
-                    <div>
-                        <h3>When Opponent's Charging</h3>
-                    </div>
-                    <div>
-                        <li>
-                            (1CP) <span class="stratagem">Tank Shock</span>
-                        </li>
-                    </div>
-                    <div>
-                        <li>
-                            (1CP) <span class="stratagem">Heroic Intervention</span>
-                        </li>
-                        <li>
-                            (1CP) <span class="stratagem">Fire Overwatch</span>
-                        </li>
-                        <li>
-                            <p class="mb2"><span class="enhancement">Shamblerot</span></p>
-                            <p class="ma0">Each time the bearer’s unit is selected as a target of an enemy unit’s
-                                charge, until the end of the phase, subtract 2 from Charge rolls made for that enemy
-                                unit.</p>
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> Section 2
-            </h2>
-            <div class="section-content">
-                <p>Some content in section 2.</p>
-                <table class="table-2col">
-                    <tr>
-                        <td>Row 1</td>
-                        <td>Data</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2</td>
-                        <td>More Data</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> Section 2
-            </h2>
-            <div class="section-content">
-                <p>Some content in section 2.</p>
-                <table class="table-2col">
-                    <tr>
-                        <td>Row 1</td>
-                        <td>Data</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2</td>
-                        <td>More Data</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> Section 2
-            </h2>
-            <div class="section-content">
-                <p>Some content in section 2.</p>
-                <table class="table-2col">
-                    <tr>
-                        <td>Row 1</td>
-                        <td>Data</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2</td>
-                        <td>More Data</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section>
-            <h2 class="pointer" onclick="toggleSection(this)">
-                <div class="dib toggle-icon">▼</div> Section 2
-            </h2>
-            <div class="section-content">
-                <p>Some content in section 2.</p>
-                <table class="table-2col">
-                    <tr>
-                        <td>Row 1</td>
-                        <td>Data</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2</td>
-                        <td>More Data</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+
+
+
     </main>
     <script>
-        // Populate sidebar dynamically
-        document.addEventListener('DOMContentLoaded', function () {
-            let sidebarLinks = document.getElementById('sidebar-links');
-            document.querySelectorAll('h2').forEach((h2, index) => {
-                let id = `section-${index}`;
-                h2.id = id;
-                let li = document.createElement('li');
-                li.innerHTML = `<a href="#${id}" class="db white pv2">${h2.textContent}</a>`;
-                sidebarLinks.appendChild(li);
-            });
-        });
-
         // Toggle section content
         function toggleSection(header) {
             let content = header.nextElementSibling;
