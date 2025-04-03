@@ -30,16 +30,47 @@
         <section>
             <h2>Detachment & Enhancement</h2>
             <div class="flex flex-wrap">
-                <div class="w-100 w-50-l">
-                    <h3>Spread the Sickness
+                <div class="w-100 w-50-l ph3">
+                    <h3 class="detachment pa3 br4 dib">Spread the Sickness
                         Aura</h3>
                     <fieldset id="detachment-aura-form">
-                        <input type="radio" id="skullsquirm-blight-choice" name="skullsquirm-blight" value="skullsquirm-blight"  />
-                        <label for="skullsquirm-blight-choice">Skullsquirm Blight</label>
-
+                        <div>
+                            <input type="radio" id="skullsquirm-blight-choice" name="aura" value="skullsquirm-blight"
+                                checked />
+                            <label for="skullsquirm-blight-choice">Skullsquirm Blight</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rattlejoint-ague-choice" name="aura" value="rattlejoint-ague" />
+                            <label for="rattlejoint-ague-choice">Rattlejoint Ague</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="scabrous-soulrot-choice" name="aura" value="scabrous-soulrot" />
+                            <label for="scabrous-soulrot-choice">Scabrous Soulrot</label>
+                        </div>
                     </fieldset>
                 </div>
-                <div class="w-100 w-50-l"></div>
+                <div class="w-100 w-50-l ph3">
+                    <h3 class="pa3 br4 enhancement dib">Enhancement</h3>
+                    <fieldset id="enhancements-form">
+                        <div>
+                            <input type="radio" id="deadly-pathogen-choice" name="enhancement" value="deadly-pathogen"
+                                checked />
+                            <label for="deadly-pathogen-choice">Deadly Pathogen</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="living-plague-choice" name="enhancement" value="living-plague" />
+                            <label for="living-plague-choice">Living Plague</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="shamblerot-choice" name="enhancement" value="shamblerot" />
+                            <label for="shamblerot-choice">Shamblerot</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="the-droning-choice" name="enhancement" value="the-droning" />
+                            <label for="the-droning-choice">The Droning (Aura)</label>
+                        </div>
+                    </fieldset>
+                </div>
             </div>
         </section>
         <!-- COMMAND PHASE -->
@@ -128,6 +159,8 @@
                                         class="waha-copy">Hyper blight grenades have
                                         <strong>ASSAULT</strong></span></p>
                             </li>
+                            <li>Move the units you think will get Fire Overwatched LAST</li>
+                            <li>Reinforcements/Deep Strike</li>
                         </ul>
                     </div>
 
@@ -230,7 +263,7 @@
                         </ul>
                         <h3>Opponent's Saving Throw</h3>
                         <ul>
-                            <li>
+                            <li class="rattlejoint-li">
                                 <p class="mb2"><span class="detachment tag">Rattlejoint Ague</span> (Aura)</p>
                                 <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
                                     unit, worsen the
@@ -242,7 +275,7 @@
                     <div>
                         <h3>Hit Roll</h3>
                         <ul>
-                            <li>
+                            <li class="skullsquirm-li">
                                 <p class="mb2"><span class="detachment tag">Skullsquirm Blight</span> (Aura)</p>
                                 <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
                                     unit, worsen the
@@ -272,7 +305,8 @@
                             <li>
                                 <span class="unit-model tag">Deathshroud Terminators</span> - <span
                                     class="ability tag">Silent Bodyguard</span>
-                                <p>Each time an attack targets this unit, if the Strength characteristic of that attack
+                                <p class="waha-copy lh-copy">Each time an attack targets this unit, if the Strength
+                                    characteristic of that attack
                                     is greater than this unit’s Toughness characteristic, subtract 1 from the Wound
                                     roll.</p>
                             </li>
@@ -317,12 +351,12 @@
                     <div>
                         <ul>
                             <li>
-                                (2CP) <span class="stratagem tag">Heroic Intervention</span>
+                                (1CP) <span class="stratagem tag">Heroic Intervention</span>
                             </li>
                             <li>
                                 (1CP) <span class="stratagem tag">Fire Overwatch</span>
                             </li>
-                            <li>
+                            <li class="shamblerot-li">
                                 <p class="mb2"><span class="enhancement tag">Shamblerot</span></p>
                                 <p class="ma0 waha-copy lh-copy">Each time the bearer’s unit is selected as a target of
                                     an enemy unit’s
@@ -405,7 +439,7 @@
                         <ul id="my-fight-hit-list">
                             <li><span class="unit-model tag">Biologus Putrifier</span> - <span class="ability tag">Foul
                                     Infusion</span></li>
-                            <li>
+                            <li class="deadly-pathogen-li">
                                 <p><span class="enhancement tag">Deadly Pathogen</span> <span
                                         class="waha-copy lh-copy">- Attack + 1</span></p>
                             </li>
@@ -417,7 +451,8 @@
                             <li>
                                 <p class="mb2 pa0">Nurgle's Gift (Aura):</p>
                             </li>
-                            <li><span class="enhancement tag">Deadly Pathogen</span> - <span class="waha-copy lh-copy">
+                            <li class="deadly-pathogen-li"><span class="enhancement tag">Deadly Pathogen</span> - <span
+                                    class="waha-copy lh-copy">
                                     Strength + 1</span></li>
                         </ul>
                         <h3>Opponent's Saving Throw</h3>
@@ -431,7 +466,7 @@
                                     result of TYPHUS’ The Eater Plague ability count as enemy models destroyed by an
                                     attack made by a model in this unit for the purposes of this ability.</p>
                             </li>
-                            <li>
+                            <li class="rattlejoint-li">
                                 <p class="mb2"><span class="detachment tag">Rattlejoint Ague</span> (Aura)</p>
                             </li>
                         </ul>
@@ -439,7 +474,7 @@
                     <div>
                         <h3>Hit Roll</h3>
                         <ul id="opp-fight-hit-list">
-                            <li>
+                            <li class="skullsquirm-li">
                                 <p class="mb2"><span class="detachment tag">Skullsquirm Blight</span> (Aura)</p>
                                 <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
                                     unit, worsen the
@@ -495,6 +530,47 @@
             icon.classList.toggle('rotate-270');
             content.classList.toggle('dn');
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            updateClasses("aura", auraClassMap);
+            updateClasses("enhancement", enhancementClassMap);
+
+            document.querySelectorAll("#detachment-aura-form input").forEach(input => {
+                input.addEventListener("change", () => updateClasses("aura", auraClassMap));
+            });
+
+            document.querySelectorAll("#enhancements-form input").forEach(input => {
+                input.addEventListener("change", () => updateClasses("enhancement", enhancementClassMap));
+            });
+        });
+
+        const auraClassMap = {
+            "skullsquirm-blight": "skullsquirm-li",
+            "rattlejoint-ague": "rattlejoint-li",
+            "scabrous-soulrot": "scabrous-li"
+        };
+
+        const enhancementClassMap = {
+            "deadly-pathogen": "deadly-pathogen-li",
+            "living-plague": "living-plague-li",
+            "shamblerot": "shamblerot-li",
+            "the-droning": "the-droning-li"
+        };
+
+        function updateClasses(groupName, classMap) {
+            const selectedValue = document.querySelector(`input[name="${groupName}"]:checked`)?.value;
+
+            for (const [value, className] of Object.entries(classMap)) {
+                const elements = document.querySelectorAll(`.${className}`);
+
+                if (value === selectedValue) {
+                    elements.forEach(el => el.classList.remove("dn"));
+                } else {
+                    elements.forEach(el => el.classList.add("dn"));
+                }
+            }
+        }
+
     </script>
 </body>
 
