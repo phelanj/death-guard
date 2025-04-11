@@ -1,7 +1,18 @@
+@font-face {
+    font-family: 'conduitITC';
+    src: url('fonts/conduit.otf') format('opentype');
+  }
+
 .waha-copy {
-    font-family: "Almendra SC", serif;
-    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
+    font-size: 14px;
+  }
+
+.conduitITC {
+    font-family: 'conduitITC';
 }
 
 
@@ -22,6 +33,7 @@ section {
 header h2 {
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 
 header h2 img {
@@ -32,14 +44,24 @@ header h2 img {
 
 h2 {
     margin-top: 0;
+    font-family: 'conduitITC';
+}
+
+h3{
+    font-family: 'conduitITC';
 }
 
 
-
-span,p .tag {
+span.tag,
+p.tag{
     padding: 5px;
     border-radius: 10px;
     font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 4px;
+    font-family: 'conduitITC';
+    text-transform: uppercase;
 }
 
 #sidebar-links img {

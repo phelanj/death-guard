@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="sans-serif bg-dark-gray near-white">
@@ -31,16 +32,16 @@
             <h2>Detachment & Enhancement</h2>
             <div class="flex flex-wrap">
                 <div class="w-100 w-50-l ph3">
-                    <h3 class="detachment pa3 br4 dib">Spread the Sickness
+                    <h3 class="detachment pa3 br4 dib ttu">Spread the Sickness
                         Aura</h3>
                     <fieldset id="detachment-aura-form">
                         <div>
-                            <input type="radio" id="skullsquirm-blight-choice" name="aura" value="skullsquirm-blight"
-                                checked />
+                            <input type="radio" id="skullsquirm-blight-choice" name="aura" value="skullsquirm-blight" />
                             <label for="skullsquirm-blight-choice">Skullsquirm Blight</label>
                         </div>
                         <div>
-                            <input type="radio" id="rattlejoint-ague-choice" name="aura" value="rattlejoint-ague" />
+                            <input type="radio" id="rattlejoint-ague-choice" name="aura" value="rattlejoint-ague"
+                                checked />
                             <label for="rattlejoint-ague-choice">Rattlejoint Ague</label>
                         </div>
                         <div>
@@ -50,11 +51,11 @@
                     </fieldset>
                 </div>
                 <div class="w-100 w-50-l ph3">
-                    <h3 class="pa3 br4 enhancement dib">Enhancement</h3>
+                    <h3 class="pa3 br4 enhancement dib ttu">Enhancement</h3>
                     <fieldset id="enhancements-form">
                         <div>
-                            <input type="radio" id="deadly-pathogen-choice" name="enhancement" value="deadly-pathogen"
-                                checked />
+                            <input type="radio" id="deadly-pathogen-choice" name="enhancement"
+                                value="deadly-pathogen" checked />
                             <label for="deadly-pathogen-choice">Deadly Pathogen</label>
                         </div>
                         <div>
@@ -87,18 +88,9 @@
                 <ul>
                     <li>Draw Mission card</li>
                     <li>
-                        (1CP) <span class="stratagem tag">Gifts of Decay</span>
-                        <p class=" mt2 waha-copy lh-copy">Your model regains
-                            up to D3 lost wounds.
-                            If your model’s unit is within Contagion Range of an Infected objective marker you control,
-                            your
-                            model regains up to 3 lost wounds instead.</p>
-                    </li>
-                    <li>
                         <span class="unit-model tag">Rhino</span> - <span class="ability tag">Self Repair</span>
                         <p class="mt2 waha-copy lh-copy">
-                            At the start
-                            of your Command phase, this model regains 1 lost wound.
+                            At the start of your Command phase, this model regains 1 lost wound.
                         </p>
                     </li>
                 </ul>
@@ -109,14 +101,22 @@
                             battle)</span></li>
                     <li><span class="unit-model tag">Plague Marines</span> - <span
                             class="ability tag">Remorseless</span>
-                        <p class="mt2 waha-copy lh-copy">While this unit is within range of an objective marker you
+                        <p class="mt2 waha-copy lh-copy">While this unit is <span style="font-weight: 800;">within range</span> of an objective marker you
                             control, each time you take a
                             Battle-shock test for this unit, add 1 to that test.</p>
                     </li>
                 </ul>
                 <h3>End of Phase</h3>
                 <ul>
-                    <li><strong>Fixed Objectives: </strong>Assassination, Storm Hostile Objective, Bring it Down</li>
+                    <li>
+                        (1CP) <span class="stratagem tag">Gifts of Decay</span>
+                        <p class=" mt2 waha-copy lh-copy">Your model regains
+                            up to D3 lost wounds.
+                            If your model’s unit is <span class="fw8">within Contagion Range</span>    of an Infected objective marker you control,
+                            your
+                            model regains up to 3 lost wounds instead.</p>
+                    </li>
+                    <li class="fw6">Score Primary</li>
                     <li>
                         <strong>Infected Objectives:</strong>
                         <p class="waha-copy lh-copy">If you control an objective marker at the end of your Command phase
@@ -129,7 +129,7 @@
                             is
                             Infected and under your control, it has the <strong>Nurgle’s Gift</strong> ability as if it
                             were a unit from your
-                            army (so enemy units within Contagion Range of it will have their characteristics modified).
+                            army (so enemy units <span class="fw8">within Contagion Range</span> of it will have their characteristics modified).
                         </p>
                     </li>
                 </ul>
@@ -153,9 +153,9 @@
                         <h3>When Opponent's Moving</h3>
                     </div>
                     <div>
-                        <ul>
+                        <ul class="waha-copy lh-copy">
                             <li>
-                                <p class="lh-copy"><span class="unit-model tag">Biologus Putrifier</span> - <span
+                                <p class="lh-copy"><span class="unit-model tag f4">Biologus Putrifier</span> - <span
                                         class="waha-copy">Hyper blight grenades have
                                         <strong>ASSAULT</strong></span></p>
                             </li>
@@ -219,16 +219,8 @@
                     <div>
                         <ul>
                             <li>(1CP) <span class="stratagem tag">Grenade</span></li>
-                            <li>(1CP) <span class="stratagem tag">Ferric Blight</span></li>
+                            <li>(1CP) <span class="stratagem tag">Ferric Blight</span> - <span class="waha-copy">Deathshroud or MBH</span></li>
                             <li>(1CP) <span class="stratagem tag">Boilblight</span>
-                                <p class="waha-copy lh-copy">Until the end of the phase, each time a weapon equipped by
-                                    a DEATH GUARD model from your army targets that enemy unit, that weapon has the
-                                    [HEAVY] and [IGNORES COVER] abilities.</p>
-                            </li>
-                            <li>
-                                Spore-laced Shock Waves: In your Shooting phase, after this model has shot, if one or
-                                more of those attacks made with its Plagueburst mortar scored a hit against an enemy
-                                Infantry unit, that Infantry unit must take a Battle-shock test.
                             </li>
                         </ul>
                     </div>
@@ -248,13 +240,13 @@
                         <ul>
                             <li>
                                 <p class="mb2 pa0">Nurgle's Gift (Aura):</p>
-                                <p class="ma0 pa0 waha-copy lh-copy">While an enemy unit is within Contagion Range of
+                                <p class="ma0 pa0 waha-copy lh-copy">While an enemy unit is <span class="fw8">within Contagion Range</span> of
                                     this unit, subtract
                                     1 from the
                                     Toughness characteristic of models in that enemy</p>
                             </li>
                             <li>
-                                <p><span class="unit-model">
+                                <p><span class="unit-model tag">
                                         Myphitic Blight-hauler</span> - <span class="ability tag">Tank Hunter</span>
                                 </p>
                                 <p class="lh-copy waha-copy">Each time a model in this unit makes a ranged attack that
@@ -265,7 +257,7 @@
                         <ul>
                             <li class="rattlejoint-li">
                                 <p class="mb2"><span class="detachment tag">Rattlejoint Ague</span> (Aura)</p>
-                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is <span class="fw8">within Contagion Range</span> of any
                                     unit, worsen the
                                     Save
                                     characteristic of models in that enemy unit by 1.</p>
@@ -277,19 +269,10 @@
                         <ul>
                             <li class="skullsquirm-li">
                                 <p class="mb2"><span class="detachment tag">Skullsquirm Blight</span> (Aura)</p>
-                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is <span class="fw8">within Contagion Range</span> of this
                                     unit, worsen the
                                     Ballistic Skill characteristics of weapons equipped by models in that enemy unit by
                                     1.
-                                </p>
-                            </li>
-                            <li>
-                                <span class="unit-model tag">Nurglings</span> - <span class="ability tag">Mischief
-                                    Makers</span> (Aura)
-                                <p class="lh-copy waha-copy">Each time an enemy unit (excluding Titanic units) within
-                                    Engagement Range of one or
-                                    more units with this ability is selected to fight, until the end of the phase, each
-                                    time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
                                 </p>
                             </li>
                             <li>
@@ -399,27 +382,27 @@
                             <li>
                                 <p class="mb2">(1CP) <span class="stratagem tag">Epic Challenge</span> - <span
                                         class="waha-copy lh-copy">Until the end of the phase, all melee attacks made by
-                                        that model have the [PRECISION] ability.</span></p>
+                                        that <span class="fw8">model</span> have the <span class="conduitITC">[PRECISION]</span> ability.</span></p>
                             </li>
                             <li>
                                 <p class="mb2">(1CP) <span class="stratagem tag">Ferric Blight</span></p>
                                 <p class="ma0 waha-copy lh-copy">Until the end of the phase, each time a model in your
                                     unit makes an
                                     attack, improve the Armour Penetration characteristic of that attack by 1. If the
-                                    target of that attack is within Contagion Range of an Infected objective marker you
+                                    target of that attack is <span class="fw8">within Contagion Range</span> of an Infected objective marker you
                                     control and a Critical Wound is scored for that attack, improve the Armour
                                     Penetration characteristic of that attack by 2 instead.</p>
                             </li>
                             <li>
-                                <p class="mb2">(1CP) <span class="stratagem tag">Sanguous Flux</span></p>
+                                <p class="mb2">(1CP) <span class="stratagem tag">Sanguous Flux</span> - <span class="waha-copy" style="font-weight: 800;">Bio P/Deathshroud <span style="font-size: 0.6rem;">(STACKS WITH FOUL INFUSION)</span></span></p>
                                 <p class="ma0 waha-copy lh-copy">Until the end of the phase, weapons equipped by models
                                     in your unit have
-                                    the [SUSTAINED HITS 1] ability. While your unit is within range of an Infected
-                                    objective marker you control, those weapons have the [SUSTAINED HITS 2] ability
+                                    the <span class="conduitITC">[SUSTAINED HITS 1]</span> ability. While your unit is <span style="font-weight: 800;">within range</span> of an Infected
+                                    objective marker you control, those weapons have the <span class="conduitITC">[SUSTAINED HITS 2]</span> ability
                                     instead.</p>
                             </li>
                             <li>
-                                <p class="mb2">(2CP) <span class="stratagem">Disgustingly Resiliant</span></p>
+                                <p class="mb2">(2CP) <span class="stratagem tag">Disgustingly Resiliant</span></p>
                                 <p class="ma0 waha-copy lh-copy">Until the end of the phase, each time an attack is
                                     allocated to a model in your unit, subtract 1 from the Damage characteristic of that
                                     attack.</p>
@@ -441,7 +424,7 @@
                                     Infusion</span></li>
                             <li class="deadly-pathogen-li">
                                 <p><span class="enhancement tag">Deadly Pathogen</span> <span
-                                        class="waha-copy lh-copy">- Attack + 1</span></p>
+                                        class="waha-copy lh-copy">- Attack + 1/2</span></p>
                             </li>
 
                             </li>
@@ -453,10 +436,13 @@
                             </li>
                             <li class="deadly-pathogen-li"><span class="enhancement tag">Deadly Pathogen</span> - <span
                                     class="waha-copy lh-copy">
-                                    Strength + 1</span></li>
+                                    Strength + 1/2</span></li>
                         </ul>
                         <h3>Opponent's Saving Throw</h3>
                         <ul id="my-fight-opp-sv-list">
+                            <li class="rattlejoint-li">
+                                <p class="mb2"><span class="detachment tag">Rattlejoint Ague</span> (Aura)</p>
+                            </li>
                             <li>
                                 <p class="mb2"><span class="ability tag">Curse of the Walking Pox</span></p>
                                 <p class="ma0 waha-copy lh-copy">Each time a model in this unit makes an attack that
@@ -466,9 +452,6 @@
                                     result of TYPHUS’ The Eater Plague ability count as enemy models destroyed by an
                                     attack made by a model in this unit for the purposes of this ability.</p>
                             </li>
-                            <li class="rattlejoint-li">
-                                <p class="mb2"><span class="detachment tag">Rattlejoint Ague</span> (Aura)</p>
-                            </li>
                         </ul>
                     </div>
                     <div>
@@ -476,13 +459,13 @@
                         <ul id="opp-fight-hit-list">
                             <li class="skullsquirm-li">
                                 <p class="mb2"><span class="detachment tag">Skullsquirm Blight</span> (Aura)</p>
-                                <p class="ma0 waha-copy lh-copy">While an enemy unit is within Contagion Range of this
+                                <p class="ma0 waha-copy lh-copy">While an enemy unit is <span class="fw8">within Contagion Range</span> of this
                                     unit, worsen the
                                     Ballistic Skill characteristics of weapons equipped by models in that enemy unit by
                                     1.
                                 </p>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <span class="unit-model tag">Nurglings</span> - <span class="ability tag">Mischief
                                     Makers</span> (Aura)
                                 <p class="lh-copy waha-copy">Each time an enemy unit (excluding Titanic units) within
@@ -490,14 +473,15 @@
                                     more units with this ability is selected to fight, until the end of the phase, each
                                     time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
                                 </p>
-                            </li>
+                            </li> -->
+                            <li><span class="tag unit-model">Typhus</span> - <span class="tag ability">Destroyer Hive</span> <p class="waha-copy">While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll.</p></li>
                         </ul>
                         <h3>Wound Roll</h3>
                         <ul id="opp-fight-wound-list">
                             <li>
                                 <span class="unit-model tag">Deathshroud Terminators</span> - <span
                                     class="ability tag">Silent Bodyguard</span>
-                                <p>Each time an attack targets this unit, if the Strength characteristic of that attack
+                                <p class="lh-copy waha-copy">Each time an attack targets this unit, if the Strength characteristic of that attack
                                     is greater than this unit’s Toughness characteristic, subtract 1 from the Wound
                                     roll.</p>
                             </li>
